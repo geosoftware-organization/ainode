@@ -1,0 +1,4 @@
+# Numerous always-ignore extensions
+
+# Folders which needs to be ignored
+venv

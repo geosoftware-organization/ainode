@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'finviz',
     'yahoo',
+    'forex_ecb',
 ]
 
 REST_FRAMEWORK = {

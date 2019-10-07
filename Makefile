@@ -2,7 +2,7 @@ ROOT_DIR:=./
 SRC_DIR:=./src
 REQUIREMENTS_DIR:="requirements"
 
-venv: venv/bin/activate
+venv: .venv/bin/activate
 
 venv/bin/activate: requirements.txt
 	virtualenv venv

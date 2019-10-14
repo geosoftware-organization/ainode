@@ -82,7 +82,7 @@ class Share(object):
         ).format(self.symbol, start_time, end_time,
                  self._frequency_str(frequency_type, frequency))
         # https://query1.finance.yahoo.com/v8/finance/chart/MSFT?symbol=MSFT&period1=1566388986&period2=1567252986&interval=5m&includePrePost=true&events=div%7Csplit%7Cearn&lang=en-US&region=US&crumb=t5QZMhgytYZ&corsDomain=finance.yahoo.com
-        print('++++++++++++++ +++++++++++++++ +++++++++++++++')
+        
         print(url)
 
         resp_json = requests.get(url).json()

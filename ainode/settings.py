@@ -38,9 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'finviz',
-    'yahoo',
-    'forex_ecb',
+    'forex',
 ]
 
 REST_FRAMEWORK = {

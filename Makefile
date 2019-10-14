@@ -13,7 +13,7 @@ migrations:
 	python manage.py makemigrations
 	python manage.py migrate
 
-run:
+run: migrations
 	python manage.py runserver
 
 run_all:

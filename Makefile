@@ -1,3 +1,4 @@
+
 ROOT_DIR:=./
 SRC_DIR:=./src
 REQUIREMENTS_DIR:="requirements"
@@ -16,9 +17,6 @@ migrations:
 run: migrations
 	python manage.py runserver
 
-run_all:
-	make migrations
-	make run
 
 test:
   #TODO

@@ -3,3 +3,5 @@
 # Folders which needs to be ignored
 venv
 .venv
+.vscode
+*.pyc

@@ -23,6 +23,7 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib.auth.models import User
 from rest_framework import serializers, viewsets, routers
+from ainode.views import helloworld
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
@@ -38,5 +39,6 @@ router.register(r'users', UserViewSet, basename=None, base_name=None)
 
 urlpatterns = [
     url(r'^', include(router.urls), kwargs=None, name=None),
-    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
+    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    url(r'^(?P<num1>\d+)/(?P<num2>\d+)/$', helloworld),
 ]

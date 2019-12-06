@@ -12,6 +12,9 @@
 make run
 tensorboard --logdir=/home/darkshloser/test
 
+## Docker
+docker-compose up
+
 ## Testing
 
 TODO: Needs to be defined at least unittests covering the basic functionality like

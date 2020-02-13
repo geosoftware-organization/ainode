@@ -8,6 +8,12 @@
 (venv) $ pip install --upgrade tensorflow
 
 
+## PostgreSQL
+Name of the database: aifunddb
+sudo su - postgres
+psql
+
+
 ## Commands
 make run
 tensorboard --logdir=/home/darkshloser/test

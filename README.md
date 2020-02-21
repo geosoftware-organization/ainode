@@ -3,22 +3,14 @@
 ## Overview
 
 
-## How to upgrade Tensorflow 
-(venv) $ pip --upgrade pip
-(venv) $ pip install --upgrade tensorflow
-
-
-## PostgreSQL
-Name of the database: aifunddb
-sudo su - postgres
-psql
-
-
 ## Commands
 make run
 tensorboard --logdir=/home/darkshloser/test
 
 ## Docker
+docker-compose build
+docker-compose up -d --build
+docker-compose exec web python manage.py migrate --noinput
 docker-compose up
 
 ## Testing

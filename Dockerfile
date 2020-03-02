@@ -1,4 +1,4 @@
-FROM python:3.8.0-alpine
+FROM python:3.6
 
 # Set python output straight to the terminal
 ENV PYTHONUNBUFFERED 1
@@ -12,8 +12,8 @@ RUN mkdir /ainode
 WORKDIR /ainode
 
 # install psycopg2 dependencies
-RUN apk update \
-    && apk add bash && apk add postgresql-dev gcc python3-dev musl-dev
+# RUN apk update \
+#     && apk add bash && apk add postgresql-dev gcc python3-dev musl-dev
 
 # install dependencies
 RUN pip install --upgrade pip

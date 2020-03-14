@@ -2,6 +2,7 @@ from django.http import HttpResponse
 import random
 import tensorflow as tf
 def helloworld(request,num1,num2):
+    # return HttpResponse("Success")
     tf.compat.v1.disable_eager_execution()
     logs_path='/home/darkshloser/test'
     n1=int(num1)

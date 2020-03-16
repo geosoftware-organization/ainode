@@ -24,7 +24,7 @@ class Country(models.Model):
     def __str__(self):
         return f'{self.name} {self.code}'
 
-class Share(models.Model):
+class Stock(models.Model):
     symbol = models.CharField(max_length=10)
     full_name = models.CharField(max_length=200)
     description = models.TextField()
@@ -37,7 +37,7 @@ class Share(models.Model):
         return f'{self.symbol}'
 
 class DailyStockPrice(models.Model):
-    stock = models.ForeignKey(Share, on_delete=models.CASCADE)
+    stock = models.ForeignKey(Stock, on_delete=models.CASCADE)
     type = models.CharField(max_length=10, choices=STOCK_TYPES, default=SHARE)
     date = models.DateField()
     open_price = models.DecimalField(decimal_places=5, max_digits=19, null=True, blank=True)

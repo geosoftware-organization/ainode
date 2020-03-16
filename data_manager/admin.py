@@ -5,8 +5,8 @@ from . import models
 class CountryAdmin(admin.ModelAdmin):
     pass
 
-@admin.register(models.Share)
-class ShareAdmin(admin.ModelAdmin):
+@admin.register(models.Stock)
+class StockAdmin(admin.ModelAdmin):
     pass
 
 @admin.register(models.DailyStockPrice)

@@ -28,7 +28,7 @@ class Stock(models.Model):
     symbol = models.CharField(max_length=10)
     full_name = models.CharField(max_length=200)
     description = models.TextField()
-    country = models.ForeignKey(Country, on_delete=models.CASCADE)
+    country = models.ForeignKey(Country, on_delete=models.CASCADE, null=True)
     active = models.BooleanField(default=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)

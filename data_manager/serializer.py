@@ -6,9 +6,9 @@ class CountrySerializer(serializers.ModelSerializer):
         model = models.Country
         fields = '__all__'
 
-class ShareSerializer(serializers.ModelSerializer):
+class StockSerializer(serializers.ModelSerializer):
     class Meta:
-        model = models.Share
+        model = models.Stock
         fields = '__all__'
 
 class DailyStockPriceSerializer(serializers.ModelSerializer):

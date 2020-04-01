@@ -15,3 +15,43 @@ ALTER ROLE aifunduser SET client_encoding TO 'utf8';
 ALTER ROLE aifunduser SET default_transaction_isolation TO 'read committed';
 ALTER ROLE aifunduser SET timezone TO 'UTC';
 GRANT ALL PRIVILEGES ON DATABASE aifunddb TO aifunduser;
+
+
+### Docker management 
+sudo docker system prune 
+docker-compose build
+docker-compose up
+
+### Copy from local host to docker container and vice versa
+sudo docker cp <containerId>:/file/path/within/container /host/path/target
+
+### Dump and Restore the database
+1. Dump 
+    - login to the container '$docker exec -it ainode_db /bin/bash'
+    - dump all the data into a *.tar file
+
+        ```
+            $pg_dump -U db_user -W -F t db_name > /path/to/your/file/dump_name.tar
+        
+            Here we used the following options:
+            -U to specify which user will connect to the PostgreSQL database server.
+            -W or --password will force pg_dump to prompt for a password before connecting to the server.
+            -F is used to specify the format of the output file, which can be one of the following:
+            p – plain-text SQL script
+            c – custom-format archive
+            d – directory-format archive
+            t – tar-format archive
+        ```
+
+2. Restore 
+    - Copy the *.tar dump file into the container 
+    - Restore the database
+        ```
+            $pg_restore -d db_name /path/to/your/file/dump_name.tar -c -U db_user
+
+            If you use pg_restore you have various options available, for example:
+            -c to drop database objects before recreating them,
+            -C to create a database before restoring into it,
+            -e exit if an error has encountered,
+            -F format to specify the format of the archive.
+        ```

@@ -40,7 +40,7 @@ schedule==0.6.0
 psycopg2-binary==2.8.3
 django-kronos==1.0
 tensorboard==2.0.2
-tensorflow==2.0.1
+tensorflow==2.5.0
 tensorflow-estimator==2.0.1
 tensorflow-gpu==2.0.1
 Keras-Applications==1.0.8

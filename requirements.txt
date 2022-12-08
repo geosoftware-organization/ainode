@@ -2,7 +2,7 @@ absl-py==0.8.1
 astor==0.8.0
 astroid==2.3.3
 cachetools==3.1.1
-certifi==2019.11.28
+certifi==2022.12.7
 chardet==3.0.4
 Django==2.2.10
 djangorestframework==3.10.2
